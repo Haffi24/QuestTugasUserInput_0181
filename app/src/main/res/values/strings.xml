@@ -13,4 +13,13 @@
     <string name="skill_web">Web</string>
     <string name="proceed">Proceed</string>
     <string name="bg_desc">Background Spider</string>
+    <string name="exp_1_3">1 - 3 tahun</string>
+    <string name="exp_4_6">4 - 6 tahun</string>
+    <string name="exp_dari_lahir">Dari Lahir</string>
+    <string name="data_berhasil">Data Pendaftaran Berhasil :</string>
+    <string name="label_nama">- Nama : </string>
+    <string name="label_tgl">- Tanggal Lahir : </string>
+    <string name="label_pengalaman">- Pengalaman : </string>
+    <string name="label_email">- Email : </string>
+    <string name="label_skills">- Skills : </string>
 </resources>
