@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.Checkbox
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
@@ -31,6 +32,7 @@ import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
@@ -148,6 +150,42 @@ fun FormBiodataScreen(modifier: Modifier = Modifier) {
                             },
                             singleLine = true
                         )
+                    }
+                    Spacer(modifier = Modifier.height(15.dp))
+
+                    Text(
+                        text = stringResource(id = R.string.pilih_skill),
+                        modifier = Modifier.fillMaxWidth(),
+                        fontWeight = FontWeight.Bold,
+                        textAlign = TextAlign.Start
+                    )
+
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            Checkbox(
+                                checked = isAndroidChecked,
+                                onCheckedChange = { isAndroidChecked = it }
+                            )
+                            Text(stringResource(id = R.string.skill_android), fontSize = 12.sp)
+                        }
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            Checkbox(
+                                checked = isUiUxChecked,
+                                onCheckedChange = { isUiUxChecked = it }
+                            )
+                            Text(stringResource(id = R.string.skill_uiux), fontSize = 12.sp)
+                        }
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            Checkbox(
+                                checked = isWebChecked,
+                                onCheckedChange = { isWebChecked = it }
+                            )
+                            Text(stringResource(id = R.string.skill_web), fontSize = 12.sp)
+                        }
                     }
 
             }
