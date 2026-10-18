@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
@@ -115,6 +116,39 @@ fun FormBiodataScreen(modifier: Modifier = Modifier) {
                         modifier = Modifier.fillMaxWidth(),
                         singleLine = true
                     )
+                    Spacer(modifier = Modifier.height(10.dp))
+
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(10.dp)
+                    ) {
+                        OutlinedTextField(
+                            value = textTglLahir,
+                            onValueChange = { textTglLahir = it },
+                            label = { Text(stringResource(id = R.string.tgl_lahir)) },
+                            modifier = Modifier.weight(1f),
+                            trailingIcon = {
+                                Icon(
+                                    imageVector = Icons.Default.DateRange,
+                                    contentDescription = null
+                                )
+                            },
+                            singleLine = true
+                        )
+                        OutlinedTextField(
+                            value = textExperience,
+                            onValueChange = { textExperience = it },
+                            label = { Text(stringResource(id = R.string.experience)) },
+                            modifier = Modifier.weight(1f),
+                            trailingIcon = {
+                                Icon(
+                                    imageVector = Icons.Default.ArrowDropDown,
+                                    contentDescription = null
+                                )
+                            },
+                            singleLine = true
+                        )
+                    }
 
             }
 
